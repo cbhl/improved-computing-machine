@@ -14,19 +14,11 @@ interface Config {
 }
 
 const config: Config = {
-  title: "Welcome to Your Dashboard",
+  title: "",
   announcements: [
     {
-      heading: "Statistics",
-      subheading: "Your important stats go here"
-    },
-    {
-      heading: "Recent Activity",
-      subheading: "Your recent activities appear here"
-    },
-    {
-      heading: "Notifications",
-      subheading: "Your latest notifications show up here"
+      heading: "Chris (Airbyte)",
+      subheading: "12pm - Weekly project chat"
     }
   ]
 }
@@ -52,17 +44,17 @@ export default function Home() {
         </div>
       </header>
       <main>
-        {/* <h1 className="text-3xl mb-6 text-white">
+        <h1 className="text-3xl mb-6 text-white display:none">
           {config.title}
         </h1>
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 display:none">
           {config.announcements.map((announcement, index) => (
             <div key={index} className="bg-opacity-10 bg-white p-6 rounded-lg border border-white border-opacity-20 text-white">
               <h2 className="text-xl mb-4">{announcement.heading}</h2>
               <p className="text-sm opacity-80">{announcement.subheading}</p>
             </div>
           ))}
-        </div> */}
+        </div>
       </main>
       <div className="absolute bottom-0 left-0 w-full h-24">
         <svg viewBox="0 0 100 24" className="w-full h-full" preserveAspectRatio="none">
