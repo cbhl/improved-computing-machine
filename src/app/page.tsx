@@ -46,8 +46,8 @@ export default function Home() {
   return (
     <div className="min-h-screen p-6 relative" style={{ backgroundColor: '#010A26', color: '#FFFFFF' }}>
       <header className="flex justify-between items-center mb-8">
-        <Image src="/logo-dark.avif" alt="Logo" width={200} height={70} className="object-contain" />
-        <div className="text-xl">
+        <Image src="/logo-dark.avif" alt="Logo" width={500} height={83} />
+        <div className="text-6xl">
           {formatTime(time)}
         </div>
       </header>
