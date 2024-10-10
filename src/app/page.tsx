@@ -5,7 +5,7 @@ import Image from 'next/image'
 
 interface Announcement {
   heading: string;
-  subheading: string;
+  content: React.ReactNode; // Changed from subheading to content
 }
 
 interface Config {
@@ -17,8 +17,17 @@ const config: Config = {
   title: "",
   announcements: [
     {
-      heading: "Chris (Airbyte)",
-      subheading: "12pm - Weekly project chat"
+      heading: "Monday",
+      content: <ul>
+        <li>Weekly project reviews</li>
+      </ul>
+    },
+    {
+      heading: "Thursday",
+      content: <ul>
+        <li>10 am - Team meeting</li>
+        <li>12 pm - Weekly project chat</li>
+      </ul>
     }
   ]
 }
@@ -51,7 +60,7 @@ export default function Home() {
           {config.announcements.map((announcement, index) => (
             <div key={index} className="bg-opacity-10 bg-white p-6 rounded-lg border border-white border-opacity-20 text-white">
               <h2 className="text-xl mb-4">{announcement.heading}</h2>
-              <p className="text-sm opacity-80">{announcement.subheading}</p>
+              <div className="text-sm opacity-80">{announcement.content}</div>
             </div>
           ))}
         </div>
