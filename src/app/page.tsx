@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react'
 import Image from 'next/image'
+import BartDepartures from './components/bart-departures'
 
 interface Announcement {
   heading: string;
@@ -65,6 +66,10 @@ export default function Home() {
           ))}
         </div>
       </main>
+      <div className="absolute bottom-12
+       right-0 p-4">
+        <BartDepartures />
+      </div>
       <div className="absolute bottom-0 left-0 w-full h-24">
         <svg viewBox="0 0 100 24" className="w-full h-full" preserveAspectRatio="none">
           <path d="M0 24 Q 12.5 0, 25 12 T 50 12 T 75 12 T 100 12 L 100 24 Z" fill="#DE94F2" />
