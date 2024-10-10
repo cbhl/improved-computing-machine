@@ -52,7 +52,7 @@ export default function Home() {
         </div>
       </header>
       <main>
-        <h1 className="text-3xl mb-6 text-white">
+        {/* <h1 className="text-3xl mb-6 text-white">
           {config.title}
         </h1>
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
@@ -62,7 +62,7 @@ export default function Home() {
               <p className="text-sm opacity-80">{announcement.subheading}</p>
             </div>
           ))}
-        </div>
+        </div> */}
       </main>
       <div className="absolute bottom-0 left-0 w-full h-24">
         <svg viewBox="0 0 100 24" className="w-full h-full" preserveAspectRatio="none">
