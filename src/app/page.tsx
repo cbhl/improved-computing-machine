@@ -29,6 +29,10 @@ const config: Config = {
         <li>10 am - Team meeting</li>
         <li>12 pm - Weekly project chat</li>
       </ul>
+    },
+    {
+      heading: "The Road to 30!",
+      content: <p>⬤⬤⬤⬤⬤⬤⬤⬤◯◯◯◯◯◯◯ ◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯</p>
     }
   ]
 }
