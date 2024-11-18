@@ -64,7 +64,7 @@ export default function BartDepartures() {
         });
       });
 
-      // Sort departures by ETA and limit to 4 per platform
+      // Sort departures by ETA and limit to 5 per platform
       Object.keys(grouped).forEach((platform) => {
         grouped[platform] = grouped[platform]
           .sort((a, b) => {
@@ -72,7 +72,7 @@ export default function BartDepartures() {
             if (b.eta === "Leaving") return 1;
             return parseInt(a.eta) - parseInt(b.eta);
           })
-          .slice(0, 4);
+          .slice(0, 5);
       });
 
       setDepartures(grouped);
