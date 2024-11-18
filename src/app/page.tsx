@@ -6,7 +6,7 @@ import BartDepartures from './components/bart-departures'
 
 interface Announcement {
   heading: string;
-  content: React.ReactNode; // Changed from subheading to content
+  content: React.ReactNode; 
 }
 
 interface Config {
@@ -32,7 +32,32 @@ const config: Config = {
     },
     {
       heading: "The Road to 30!",
-      content: <p>⬤⬤⬤⬤⬤⬤⬤⬤◯◯◯◯◯◯◯ ◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯</p>
+      content: <div className="flex justify-around items-center flex-wrap">
+        <div className="max-w-[120px] m-2">
+          <Image src="/customers/ChangeOrg_White.png" alt="ChangeOrg Logo" layout="responsive" width={120} height={60} />
+        </div>
+        <div className="max-w-[120px] m-2">
+          <Image src="/customers/airbyte-logo.svg" alt="Airbyte Logo" layout="responsive" width={120} height={60} />
+        </div>
+        <div className="max-w-[120px] m-2 filter brightness-200">
+          <Image src="/customers/atropos-logo.png" alt="Atropos Logo" layout="responsive" width={120} height={60} />
+        </div>
+        <div className="max-w-[120px] m-2">
+          <Image src="/customers/logo-datasite-light.svg" alt="Datasite Logo" layout="responsive" width={120} height={60} />
+        </div>
+        <div className="max-w-[120px] m-2 filter invert hue-rotate-180">
+          <Image src="/customers/sincera-logo.png" alt="Sincera Logo" layout="responsive" width={120} height={60} />
+        </div>
+        <div className="max-w-[120px] m-2">
+          <Image src="/customers/superintelligent-logo.png" alt="Superintelligent Logo" layout="responsive" width={120} height={60} />
+        </div>
+        <div className="max-w-[120px] m-2">
+          <Image src="/customers/sygma-logo.png" alt="Sygma Logo" layout="responsive" width={120} height={60} />
+        </div>
+        <div className="max-w-[120px] m-2">
+          <Image src="/customers/zapier-logo_white.svg" alt="Zapier Logo" layout="responsive" width={120} height={60} />
+        </div>
+      </div>
     }
   ]
 }
@@ -41,7 +66,7 @@ export default function Home() {
   const [time, setTime] = useState(new Date())
 
   useEffect(() => {
-    const timer = setInterval(() => setTime(new Date()), 60000) // Update every minute
+    const timer = setInterval(() => setTime(new Date()), 60000) 
     return () => clearInterval(timer)
   }, [])
 
